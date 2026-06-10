@@ -1,0 +1,67 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Apr 17 16:37:45 2026
+;; Desktop file format version 208
+;; Emacs version 30.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (27106 17849 492082 879000) (desktop . "208") "at@void" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-UKWN-Iosevka-regular-normal-normal-*-13-*-*-*-d-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#d4d5d0") (background-color . "#162122") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 0) (right-fringe . 0) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (alpha-background) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (use-frame-synchronization) (skip-taskbar) (z-group) (cursor-color . "#9dccd4") (display-type . color) (background-mode . dark) (font-parameter) (sticky) (shaded) (environment) (last-focus-update) (dnd-root-window-position) (frameset--id . "A6A2-A4A6-CBA1-31AE") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 61) (width . 272) (left . 5) (top . 27)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 68) (min-pixel-width . 70) (min-pixel-height-ignore . 34) (min-pixel-width-ignore . 14) (min-pixel-height-safe . 17) (min-pixel-width-safe . 14)) leaf (pixel-width . 1906) (pixel-height . 1027) (total-width . 272) (total-height . 60) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 0 0 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1776) (start . 1)) (prev-buffers ("*Ibuffer*" 1 391) ("packet.py" 526 2042) ("init.el" 2170 3385) ("config" 577 1969) (".emacs.d" 1 603) ("*scratch*" 1 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '(#("magit" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("Shot" 0 4 (isearch-case-fold-search nil isearch-regexp-function nil)) #("fvwm2" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("PagerRI" 0 7 (isearch-case-fold-search nil isearch-regexp-function nil)) #("Right" 0 5 (isearch-case-fold-search nil isearch-regexp-function nil)) #("claude code" 0 11 (isearch-case-fold-search t isearch-regexp-function nil)) #("agent-s" 0 7 (isearch-case-fold-search t isearch-regexp-function nil)) #("agent-shell" 0 11 (isearch-case-fold-search t isearch-regexp-function nil)) #("agent" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("cla" 0 3 (isearch-case-fold-search t isearch-regexp-function nil))))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/Documents/DNS_BENCHMARK_TOOL/DNS-Benchmarking-Tool/src/dnsbench/packet.py" "~/.fvwm/" "~/Documents/programming/dnspython/dnspython_testing.py" "~/.emacs.d/" "~/.fvwm/" "~/.emacs.d/" "~/.emacs.d/themes/greybird-dark-theme.el" "~/.emacs.d/init.el" "~/.fvwm/config"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/at/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(corfu-mode display-line-numbers-mode font-lock-mode eldoc-mode)
+  1776
+  '(1776 nil)
+  nil
+  nil
+  '((buffer-display-time 27106 17844 974512 821000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (1776 3240 1425 2592 3182 3182 814 909 2782 2652 816 1 816 816 815 694))))
+
+(desktop-create-buffer 208
+  "/home/at/Documents/DNS_BENCHMARK_TOOL/DNS-Benchmarking-Tool/src/dnsbench/packet.py"
+  "packet.py"
+  'python-mode
+  '(corfu-mode display-line-numbers-mode eldoc-mode flymake-mode eglot--managed-mode auto-revert-mode font-lock-mode)
+  2042
+  '(2101 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 27106 17712 523986 873000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (2081 1639 1651 1639 1532 2105 2104 1267 1380 2105 2105 2100 2102 2105 1267 2042))))
+
+(desktop-create-buffer 208
+  "/home/at/.fvwm/config"
+  "config"
+  'conf-space-mode
+  '(corfu-mode display-line-numbers-mode font-lock-mode)
+  1969
+  '(9183 nil)
+  nil
+  nil
+  '((buffer-display-time 27105 53383 91174 259000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (9356 9183 8958 6920 7104 7104 7104 6128 14445 1880 4414 1424 1202 1299 1341 9463))))
+
+(desktop-create-buffer 208
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(display-line-numbers-mode font-lock-mode)
+  603
+  '(nil nil)
+  t
+  '("/home/at/.emacs.d/")
+  '((buffer-display-time 27106 17712 150557 120000))
+  '((mark-ring nil)))
+

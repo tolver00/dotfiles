@@ -1,0 +1,88 @@
+ufetch
+pfetch
+fastfetch
+clear
+cd Documents/programming/python/exercies/ 
+clear 
+python socket_01.py 
+sudo python socket_client.py 
+sudo python socket_client.py 
+sudo python socket_client.py 
+sudo python socket_client.py 
+sudo python socket_client.py 
+sudo python socket_client.py 
+sudo python socket_client.py 
+Echo message: b'Hello from client'
+sudo python socket_client_02.py 
+sudo python socket_client_02.py 
+sudo python socker_client_03.py 
+sudo python socker_client_03.py 
+sudo python socker_client_03.py 
+fastfetch 
+cd 
+fastfetch 
+python xor_cipher.py 44 900
+python xor_cipher.py 44 900
+python xor_cipher.py 44 900
+ls 
+python xor_socket.py 
+python xor_socket.py 
+python xor_socket.py 
+TypeError: 'list' object is not callable
+python xor_socket.py 
+python xor_socket.py 
+fastfetch 
+ls 
+g++ launcher_gui.cpp `fltk-config --cxxflags --ldflags` -o gui-launcher
+g++ launcher_gui.cpp `fltk-config --cxxflags --ldflags` -o gui-launcher
+fltk-config --compile main.cpp >> makefile
+ls 
+./main 
+fastfetch 
+ls 
+cd Documents/programming/dnspython/
+ls 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+;AUTHORITY
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+python dnspython_testing.py 
+cd ~/Documents/programming/dnspython/
+ls 
+python dnspython_testing.py 
+cd..
+cd ..
+cd ..
+ls 
+cat .Xresources 
+ls 
+./dns 
+dig 
+./dns 
+./dns 
+./dns 
+./dns 
+./dns 
+./dns 
+./dns 
+./dns 

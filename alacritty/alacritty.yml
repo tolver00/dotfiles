@@ -1,0 +1,45 @@
+colors:
+  primary:
+    background: "#162122"
+    foreground: "#D4D5D0"   # was #BBBCB8 — lifted for readability
+
+  cursor:
+    text:   "#162122"
+    cursor: "#8AABB2"       # was #6F898F — more visible
+
+  selection:
+    text:       "#D4D5D0"
+    background: "#304537"
+
+  normal:
+    black:   "#162122"
+    red:     "#7A6E5F"      # was #494638 — lifted from near-black
+    green:   "#4A6B56"      # was #304537 — lifted, still muted green
+    yellow:  "#9E9884"      # was #7E8674 — slightly brighter aged gold
+    blue:    "#4D7179"      # was #324C52 — lifted teal-blue
+    magenta: "#728B8E"      # was #516466 — lifted slate
+    cyan:    "#7A9DA5"      # was #607984 — more distinct
+    white:   "#BBBCB8"      # was #BBBCB8 — kept as mid-white
+
+  bright:
+    black:   "#6B8486"      # was #516466 — lifted dark grey
+    red:     "#A8A090"      # was #7E8674 — warmer light tan
+    green:   "#7FA896"      # was #607984 — cleaner sage
+    yellow:  "#D4D5D0"      # was #BBBCB8 — now matches fg
+    blue:    "#8AABB2"      # was #6F898F — cleaner teal
+    magenta: "#8AABB2"      # was #6F898F — kept consistent
+    cyan:    "#C8CCC8"      # was #BBBCB8 — near white
+    white:   "#EEEEED"      # was #ffffff — softened pure white
+
+font:
+  normal:
+    family: "Iosevka Term"
+    style: Regular
+  size: 10
+
+scrolling:
+  history: 10000
+
+cursor:
+  style:
+    shape: Block

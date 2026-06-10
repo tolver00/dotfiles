@@ -1,0 +1,47 @@
+[colors.bright]
+black = "#6B8486"
+blue = "#8AABB2"
+cyan = "#C8CCC8"
+green = "#7FA896"
+magenta = "#8AABB2"
+red = "#A8A090"
+white = "#EEEEED"
+yellow = "#D4D5D0"
+
+[colors.cursor]
+cursor = "#8AABB2"
+text = "#162122"
+
+[colors.normal]
+black = "#162122"
+blue = "#4D7179"
+cyan = "#7A9DA5"
+green = "#4A6B56"
+magenta = "#728B8E"
+red = "#7A6E5F"
+white = "#BBBCB8"
+yellow = "#9E9884"
+
+[colors.primary]
+background = "#162122"
+foreground = "#D4D5D0"
+
+[colors.selection]
+background = "#304537"
+text = "#D4D5D0"
+
+[cursor.style]
+shape = "Block"
+
+[font]
+size = 10
+
+[font.normal]
+family = "Iosevka Term"
+style = "Regular"
+
+[scrolling]
+history = 10000
+
+[window]
+padding= {x=4, y=4}

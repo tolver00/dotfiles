@@ -1,0 +1,35 @@
+[colors.bright]
+black = "#5e6078"
+blue = "#5890c8"
+cyan = "#50a8c8"
+green = "#60a068"
+magenta = "#a860c8"
+red = "#e05050"
+white = "#c8ccd8"
+yellow = "#c0b030"
+
+[colors.cursor]
+cursor = "#d4d2e2"
+text = "#2e2e38"
+
+[colors.normal]
+black = "#3c3e50"
+blue = "#4878b0"
+cyan = "#3888a8"
+green = "#508858"
+magenta = "#8848a8"
+red = "#c04040"
+white = "#8890a0"
+yellow = "#a09028"
+
+[colors.primary]
+background = "#2e2e38"
+foreground = "#d4d2e2"
+
+[colors.selection]
+background = "#484a60"
+text = "#d4d2e2"
+
+[cursor.style]
+shape = "Block"
+

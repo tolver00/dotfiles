@@ -1,0 +1,184 @@
+#!/usr/bin/env bash
+
+# herbstluftwm autostart
+# translated from awesome rc.lua
+
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+
+# ──────────────────────────────────────────────
+# Autostart
+# ──────────────────────────────────────────────
+~/.fehbg &
+# picom --config ~/.config/picom/picom.conf -b &
+
+# ──────────────────────────────────────────────
+# Key bindings
+# ──────────────────────────────────────────────
+hc keyunbind --all
+
+Mod=Mod4   # Super key, same as your awesome config
+
+# -- WM control --
+hc keybind $Mod-Control-r    reload
+
+# -- Terminal & launcher --
+hc keybind $Mod-Return       spawn alacritty
+hc keybind Alt-r             spawn dmenu_run	    
+
+# -- Close window --
+hc keybind $Mod-Shift-q      close
+
+# -- Focus (j/k like your awesome config) --
+hc keybind $Mod-j            focus down
+hc keybind $Mod-k            focus up
+hc keybind $Mod-h            focus left
+hc keybind $Mod-l            focus right
+
+# -- Move clients --
+hc keybind $Mod-Shift-j      shift down
+hc keybind $Mod-Shift-k      shift up
+hc keybind $Mod-Shift-h      shift left
+hc keybind $Mod-Shift-l      shift right
+
+# -- Arrow key alternatives --
+hc keybind $Mod-Left         focus left
+hc keybind $Mod-Right        focus right
+hc keybind $Mod-Up           focus up
+hc keybind $Mod-Down         focus down
+
+# -- Resizing frames (replaces incmwfact) --
+resizestep=0.05
+hc keybind $Mod-Control-h    resize left  +$resizestep
+hc keybind $Mod-Control-j    resize down  +$resizestep
+hc keybind $Mod-Control-k    resize up    +$resizestep
+hc keybind $Mod-Control-l    resize right +$resizestep
+
+# -- Splitting frames (herbstluftwm's manual tiling) --
+hc keybind $Mod-u            split bottom  0.5
+hc keybind $Mod-o            split right   0.5
+hc keybind $Mod-Control-space remove       # remove current split
+
+# -- Layout toggles --
+hc keybind $Mod-f            fullscreen toggle
+hc keybind $Mod-Shift-space  set_attr clients.focus.floating toggle
+hc keybind $Mod-m            set_attr clients.focus.minimized true
+hc keybind $Mod-Control-m    jumpto last-minimized
+
+# Cycle through layout algorithms (replaces Mod+Space layout cycling)
+hc keybind $Mod-space                                                     \
+            or , and . compare tags.focus.curframe_wtype = grid            \
+                     . set_layout max                                      \
+               , and . compare tags.focus.curframe_wtype = max             \
+                     . set_layout vertical                                 \
+               , and . compare tags.focus.curframe_wtype = vertical        \
+                     . set_layout horizontal                               \
+               , set_layout grid
+
+# -- Focus last window (replaces Mod+Tab) --
+hc keybind $Mod-Tab          cycle_all +1
+hc keybind $Mod-Shift-Tab    cycle_all -1
+
+# -- Move to screen (replaces Mod+o) --
+hc keybind $Mod-period       focus_monitor +1
+hc keybind $Mod-comma        focus_monitor -1
+hc keybind $Mod-Shift-period shift_to_monitor +1
+hc keybind $Mod-Shift-comma  shift_to_monitor -1
+
+# -- Brightness (same commands as your awesome config) --
+hc keybind $Mod-F6           spawn brightnessctl s +10%
+hc keybind $Mod-F5           spawn brightnessctl s 10%-
+
+# -- Volume (media keys, same as your awesome config) --
+hc keybind XF86AudioRaiseVolume  spawn pactl set-sink-volume @DEFAULT_SINK@ +5%
+hc keybind XF86AudioLowerVolume  spawn pactl set-sink-volume @DEFAULT_SINK@ -5%
+hc keybind XF86AudioMute         spawn pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# -- Screenshot --
+hc keybind $Mod-Shift-s      spawn scrot -s /home/at/Pictures/screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png
+
+# -- Mouse bindings --
+hc mouseunbind --all
+hc mousebind $Mod-Button1    move
+hc mousebind $Mod-Button3    resize
+
+# ──────────────────────────────────────────────
+# Tags (workspaces 1–9, same as your awesome config)
+# ──────────────────────────────────────────────
+tag_names=( {1..9} )
+tag_keys=( {1..9} )
+
+hc rename default "${tag_names[0]}" || true
+for i in "${!tag_names[@]}"; do
+    hc add "${tag_names[$i]}"
+    key="${tag_keys[$i]}"
+    if [ -n "$key" ]; then
+        hc keybind "$Mod-$key"                 use_index "$i"      # view tag
+        hc keybind "$Mod-Shift-$key"           move_index "$i"     # move client to tag
+        hc keybind "$Mod-Control-$key"         use_index "$i" --skip-visible  # toggle tag view
+    fi
+done
+
+# ──────────────────────────────────────────────
+# Theme / appearance
+# ──────────────────────────────────────────────
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+
+hc set frame_border_width     1
+hc set frame_border_active_color '#4D7179'
+hc set frame_border_normal_color '#162122'
+hc set frame_bg_transparent   on
+hc set frame_transparent_width 0
+hc set frame_gap              0
+hc set window_gap             4
+
+hc attr theme.border_width    2
+hc attr theme.active.color    '#7A9DA5'
+hc attr theme.normal.color    '#304537'
+hc attr theme.urgent.color    '#A8A090'
+hc attr theme.floating.border_width 3
+
+# Focus follows mouse (same as your awesome sloppy focus)
+hc set focus_follows_mouse    true
+
+# ──────────────────────────────────────────────
+# Window rules (replaces awful.rules)
+# ──────────────────────────────────────────────
+hc unrule -F
+
+hc rule focus=on                              # newly opened windows get focus
+hc rule floatplacement=smart
+
+# Float these (matching your awesome floating rules)
+hc rule class=Arandr           floating=on
+hc rule class=Blueman-manager  floating=on
+hc rule class=Gpick            floating=on
+hc rule class=mpv              floating=on
+hc rule class=Sxiv             floating=on
+hc rule class=pinentry         floating=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
+
+# ──────────────────────────────────────────────
+# Panel (herbstluftwm's built-in panel)
+# ──────────────────────────────────────────────
+# herbstluftwm ships with a basic panel script. It shows:
+#   - tag list (left)
+#   - window title (center)
+#   - clock (right)
+#
+# It lives at /etc/xdg/herbstluftwm/panel.sh (or your local copy).
+# To roughly match your awesome bar, you can either:
+#   1. Use the bundled panel.sh as-is (good enough to start)
+#   2. Use polybar or lemonbar for something more customisable
+#
+# Reserve space for the panel and launch it:
+hc set_monitors "$(xrandr --query | grep ' connected' | head -1 | grep -oP '\d+x\d+\+\d+\+\d+')"
+panel=~/.config/herbstluftwm/panel.sh
+[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+for monitor in $(hc list_monitors | cut -d: -f1); do
+    "$panel" "$monitor" &
+done

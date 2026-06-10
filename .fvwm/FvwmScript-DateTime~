@@ -1,0 +1,40 @@
+WindowTitle {Clock}
+WindowSize  150 50
+# Set the global font here as a fallback
+Font "xft:Cozette:pixelsize=20:antialias=false" 
+
+Init
+ Begin
+  # Get both time and date in one string for easier centering
+  Set $FullDate = (GetOutput {exec date "+%H:%M %a %d"} 1 -1)
+  ChangeTitle 1 $FullDate
+End
+
+PeriodicTasks
+ Begin 
+  # Update every second (1) instead of every 15 for a "live" feel
+  If (RemainderOfDiv (GetTime) 1)==0 Then
+  Begin
+   Set $FullDate = (GetOutput {exec date "+%H:%M %a %d"} 1 -1)
+   ChangeTitle 1 $FullDate
+  End
+End
+
+Widget 1
+Property
+ # Position at 0,0 and match the WindowSize exactly
+ Position 0 0
+ Size 150 50
+ Font "xft:Cozette:pixelsize=20:antialias=false"
+ Type ItemDraw
+ # Flags Center makes it mathematically centered in the widget box
+ Flags Center NoReliefString
+ Title {}
+Main
+ Case message of
+  SingleClic :
+  Begin
+    # Optional: Clicking the clock could launch a calendar
+    # Exec "exec xterm -e calcurse"
+  End
+End

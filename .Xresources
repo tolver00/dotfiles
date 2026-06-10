@@ -1,0 +1,112 @@
+! ==========================================================
+! Gothic colorscheme — matched to alacritty.toml
+! ==========================================================
+
+! --- Base ---
+*.foreground:   #D4D5D0
+*.background:   #162122
+*.cursorColor:  #8AABB2
+
+! --- Selection ---
+*.highlightColor:      #304537
+*.highlightTextColor:  #D4D5D0
+
+! --- ANSI colors (normal) ---
+! black
+*.color0:  #162122
+! red
+*.color1:  #7A6E5F
+! green
+*.color2:  #4A6B56
+! yellow
+*.color3:  #9E9884
+! blue
+*.color4:  #4D7179
+! magenta
+*.color5:  #728B8E
+! cyan
+*.color6:  #7A9DA5
+! white
+*.color7:  #BBBCB8
+
+! --- ANSI colors (bright) ---
+! black
+*.color8:  #6B8486
+! red
+*.color9:  #A8A090
+! green
+*.color10: #7FA896
+! yellow
+*.color11: #D4D5D0
+! blue
+*.color12: #8AABB2
+! magenta
+*.color13: #8AABB2
+! cyan
+*.color14: #C8CCC8
+! white
+*.color15: #EEEEED
+
+! ==========================================================
+! Font rendering
+! ==========================================================
+Xft.dpi:        96
+Xft.antialias:  1
+Xft.hinting:    1
+Xft.hintstyle:  hintslight
+Xft.rgba:       rgb
+
+! ==========================================================
+! Cursor
+! ==========================================================
+Xcursor.size:   24
+Xcursor.theme:  Adwaita
+
+! ==========================================================
+! XTerm
+! ==========================================================
+XTerm*termName:            xterm-256color
+XTerm*faceName:            xft:GeistMono:size=9:antialias=true
+XTerm*colorBDMode:         true
+XTerm*scrollBar:           false
+XTerm*saveLines:           10000
+XTerm*VT100.Translations: #override \
+    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! ==========================================================
+! URxvt
+! ==========================================================
+
+! --- Font ---
+URxvt.font:              xft:IBM Plex Mono:size=9:antialias=true
+URxvt.boldFont:          xft:IBM Plex Mono:bold:size=9:antialias=true
+URxvt.italicFont:        xft:IBM Plex Mono:italic:size=9:antialias=true
+URxvt.boldItalicFont:    xft:IBM Plex Mono:bold:italic:size=9:antialias=true
+URxvt.letterSpace:       0
+URxvt.lineSpace:         1
+
+! --- General ---
+URxvt.scrollBar:         false
+URxvt.internalBorder:    5
+URxvt.cursorBlink:       false
+URxvt.cursorUnderline:   false
+URxvt.saveline:          10000
+URxvt.jumpScroll:        true
+URxvt.skipScroll:        true
+URxvt.iso14755:          false
+URxvt.iso14755_52:       false
+URxvt.urgentOnBell:      true
+URxvt.depth:             32
+URxvt.termName:          xterm-256color
+
+! --- Copy/paste & extensions ---
+URxvt.perl-ext-common: selection-to-clipboard
+
+! url-select: open urls with keyboard
+URxvt.url-select.launcher:   xdg-open
+URxvt.url-select.underline:  true
+URxvt.keysym.M-u:            perl:url-select:select_next
+
+! keyboard-select: vim-like text selection
+URxvt.keysym.M-Escape:       perl:keyboard-select:activate

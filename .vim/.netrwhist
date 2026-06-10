@@ -1,0 +1,499 @@
+ImagePath $HOME/.fvwm/icons:+
+DefaultFont "xft:Cozette:size=10:antialias=false"
+
+
+DesktopConfiguration per-monitor
+
+# Set occupied working area on both monitors
+EwmhBaseStruts screen HDMI-A-0 10 10 10 50
+EwmhBaseStruts screen DisplayPort-1 10 10 10 30
+# Uncomment to hide geometry window for move action
+#HideGeometryWindow Move
+# == Set cursors ==
+# Classic "X" root cursor
+CursorStyle "ROOT" "left_ptr"
+
+# exec feh to reload wallpaper
+Exec sh ~/.fehbg
+
+# == Pager/Desktops ==
+# 2 x 2 desktops
+DeskTopSize 4 1 
+# Allow moving windows between desktops, but with a bit of resistance.
+EdgeResistance 150 150
+# Never scroll to next desktop using mouse.
+EdgeScroll 0 0
+# Pager Look.
+# == Window colors and styles ==
+# Menu colors are set in menu style below.
+# Standard Color set for window decorations
+# 3: Colorsets
+#
+#   0 - Default
+#   1 - Inactive Windows
+#   2 - Active Window
+#   3 - Inactive Windows Borders
+#   4 - Active Windows Borders
+#   5 - Menu - Inactive Item
+#   6 - Menu - Active Item
+#   7 - Menu - Grayed Item
+#   8 - Menu - Title
+#  10+ Modules
+###########
+CleanupColorsets
+
+ColorSet 0  fg #e2e2e2, bg #4b5263
+ColorSet 1  fg #adadad, bg #2a2e37
+ColorSet 2  fg #e2e2e2, bg #191919, hi #5d5f5b, sh #0d0f0f
+ColorSet 3  fg #d2d2d2, bg #364750, hi #5d5f5b, sh #0d0f0f
+ColorSet 4  fg #e2e2e2, bg #364750, hi #5d5f5b, sh #0d0f0f
+ColorSet 5  fg #e2e2e2, bg #262626
+ColorSet 6  fg #e2e2e2, bg #4b5263
+ColorSet 7  fg #d2d2d2, bg #262626
+ColorSet 8  fg #56b6c2, bg #262626
+
+ColorSet 17  fg #e2e2e2, bg #364750, hi #5d5f5b, sh #0d0f0f
+ColorSet 18  fg #4b5263, bg #191919, hi #5d5f5b, sh #0d0f0f
+
+##=========== Desktop Modules ===============
+#============================================
+DestroyModuleConfig PagerRight
+*PagerRight: Monitor HDMI-A-0
+*PagerRight: CurrentDeskPerMonitor
+*PagerRight: ColorSet 18
+*PagerRight: HilightColorset * 17
+*PagerRIght: NoDeskLabels
+*PagerRight: Geometry 252x34-150+1395
+*PagerRight: SolidSeparators
+
+DestroyModuleConfig PagerLeft
+*PagerLeft: Monitor DisplayPort-1 
+*PagerLeft: CurrentDeskPerMonitor
+*PagerLeft: ColorSet 18
+*PagerLeft: HilightColorset * 17
+*PagerLeft: NoDeskLabels
+*PagerLeft: Geometry 128x20+655+1050
+*PagerLeft: SolidSeparators
+
+DestroyModuleConfig TaskBarIcons: *
+*TaskBarIcons: Font "xft:Cozette:size=10:antialias=false" 
+*TaskBarIcons: UseWinList
+*TaskBarIcons: Tips needed
+*TaskBarIcons: ReliefThickness 2
+*TaskBarIcons: ManagerGeometry 1x1
+*TaskBarIcons: ButtonGeometry 120x24
+*TaskBarIcons: Format "%t"
+*TaskBarIcons: Resolution Global
+*TaskBarIcons: DrawIcons True
+*TaskBarIcons: FollowFocus True
+*TaskBarIcons: Sort Id
+*TaskBarIcons: ColorSet 18
+*TaskBarIcons: FocusColorSet 17
+*TaskBarIcons: PlainColorset 18
+
+DestroyModuleConfig RightTaskBarIcons: *
+*RightTaskBarIcons: Font  "xft:Cozette:size=10:antialias=false"
+*RightTaskBarIcons: ManagerGeometry 10x1+10+1050
+*RightTaskBarIcons: ButtonGeometry 64x20
+*RightTaskBarIcons: Format "%t"
+*RightTaskBarIcons: Frame 0
+*RightTaskBarIcons: Action Mouse 1 N SendCommand Raise-and-Focus
+*RightTaskBarIcons: Sort Id
+*RightTaskBarIcons: Resolution Global
+*RightTaskBarIcons: DrawIcons True
+*RightTaskBarIcons: ColorSet 18
+*RightTaskBarIcons: FocusColorSet 17
+*RightTaskBarIcons: PlainColorset 18
+WindowFont  "xft:Cozette:size=10:antialias=false"
+
+DestroyModuleConfig LeftClock: *
+*LeftClock: Geometry 84x20+1820+1050
+*LeftClock: ColorSet 18
+*LeftClock: Frame 0
+*LeftClock: Rows 1
+*LeftClock: Columns 1
+*LeftClock: (Swallow (UseOld) "xclock" `Exec xclock -digital -strftime "%H:%M, %d-%m" -face "Cozette-8" -bg "#191919" -fg "#e5c07b" -padding 4`)
+
+
+DestroyModuleConfig DockApps: *
+*DockApps: Geometry 128x34-10+1395
+*DockApps: ColorSet 18
+*DockApps: Frame 0
+*DockApps: Rows 1
+*DockApps: Columns 1
+*DockApps: (Swallow (UseOld) "xclock" `Exec xclock -digital -strftime "%H:%M, %d-%m,%g" -face "Cozette-13" -bg "#191919" -fg "#e5c07b"`)
+
+DestroyModuleConfig QuickAccessMenu: *
+*QuickAccessMenu: Columns 2
+*QuickAccessMenu: Rows 1
+*QuickAccessMenu: Frame 0
+*QuickAccessMenu: Padding 2 2
+*QuickAccessMenu: ColorSet 18
+*QuickAccessMenu: ActiveColorSet 17
+*QuickAccessMenu: Geometry 128x32-10+95
+#*QuickAccessMenu: ButtonGeometry 32x32
+*QuickAccessMenu: (1x1, Icon "/usr/share/icons/vintage/apps/24/deepin-terminal.svg", Action (Mouse 1) `Exec exec xterm`)
+*QuickAccessMenu: (1x1, Icon "/usr/share/icons/vintage/apps/24/firefox-zh.svg", Action (Mouse 1) `Exec exec firefox`)
+*QuickAccessMenu: (1x1, Icon "/usr/share/icons/vintage/apps/24/deepin-editor.svg", Action (Mouse 1) `Exec exec gvim`)
+
+##=========== Styles==================
+Style * DecorateTransient
+Style "*" SloppyFocus
+# Decors and overrides.
+Style *             Title, Handles, !MWMFunctions, NoDecorHint 
+Style *             DepressableBorder, HandleWidth 6, BorderWidth 6
+Style "FvwmIconMan" NoTitle, Sticky, WindowListSkip, NoHandles, NeverFocus
+Style "PagerRight"  NoTitle, Sticky, WindowListSkip, NoHandles, FixedPosition, FixedSize, NeverFocus
+Style "RightTaskBarClock"    NoTitle, Sticky, WindowListSkip, NoHandles, VariableSize, NeverFocus
+Style "stalonetray" NoTitle, Sticky, WindowListSkip, CirculateSkip 
+Style "stalonetray" BorderWidth 1, NeverFocus 
+Style "TaskBarIcons" NoTitle, WindowListSkip, NoHandles, BorderWidth 0, Sticky
+Style "RightWeatherUpdate" Notitle, WindowListSkip, Sticky, BorderWidth 0
+Style "WeatherTerm" NeverFocus, WindowListSkip, Sticky
+Style "QuickAccessMenu" NoTitle, WindowListSkip, NoHandles, Sticky, NeverFocus, StaysOnBottom
+Style "*xclock*" NoTitle, WindowListSkip, NoHandles, Sticky, NeverFocus, StaysOnBottom
+Style "RightTaskBarClock" NeverFocus, NoTitle, WindowListSkip, Sticky
+Style "*wmclock*" NeverFocus, NoTitle, WindowListSkip, Sticky, BorderWidth 0, FixedSize
+Style "*wmifinfo*" NeverFocus, NoTitle, WindowListSkip, Sticky, BorderWidth 0, FixedSize
+Style "DockApps" NeverFocus, NoTitle, WindowListSkip, Sticky, BorderWidth 0, FixedSize
+Style "LeftClock" NeverFocus, NoTitle, WindowListSkip, Sticky
+Style * NoButton 1, NoButton 2, NoButton 3, NoButton 4, NoButton 5, NoButton 6, NoButton 7, NoButton 8, NoButton 9 
+Style "PagerLeft" NoTitle, Sticky, WindowListSkip, NoHandles, FixedPosition, FixedSize, NeverFocus, StaysOnBottom
+
+# == Menu styles ==
+MenuStyle * MenuColorSet 2, ActiveColorSet 3
+MenuStyle * Mwm, PopupImmediately, PopdownImmediately
+MenuStyle * TrianglesSolid, TriangleUseFore
+MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsLong
+MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
+MenuStyle * Font "xft:Cozette:size=10:antialias=false" 
+
+# Decor and ButtonStyles
+DestroyDecor MyDecor
+AddToDecor MyDecor
++ TitleStyle LeftJustified Height 18 -- Flat
++ BorderStyle -- HiddenHandles 
++ ButtonStyle All Vector 3 75x25@1 25x25@1 25x75@1
++ AddButtonStyle All Vector 5 20x20@0 20x80@0 80x80@0 80x20@0 20x20@0
++ AddButtonStyle All Vector 3 30x85@2 85x85@2 85x20@2
++ AddButtonStyle 2 Vector 2 40x40@0 60x60@0
++ AddButtonStyle 2 Vector 2 40x60@0 60x40@0
++ AddButtonStyle 4 Vector 5 35x35@0 35x65@0 65x65@0 65x35@0 35x35@0
++ AddButtonStyle 4 Vector 2 35x45@0 65x45@0
++ AddButtonStyle 4 Vector 2 35x40@0 65x40@0
++ AddButtonStyle 6 Vector 2 35x65@0 65x65@0
++ AddButtonStyle 6 Vector 2 35x60@0 65x60@0
+#+ ButtonStyle All -- UseTitleStyle Flat
+
+#DestroyFunc RefreshWeather
+#AddToFunc RefreshWeather
+#+ I KIllModule FvwmButtons RightWeatherUpdate
+#+ I Module FvwmButtons RightWeatherUpdate
+#+ I Schedule 3600000 RefreshWeather RefreshWeather
+
+
+ClickTime 250
+
+# Enable solid window moving for all window sizes.
+OpaqueMoveSize -1
+
+# Emulate Motif Window Manager hints.
+Emulate Mwm
+
+# Window Placement: New windows are placed directly under the mouse pointer.
+Style "*" UsePipes, TileCascadePlacement, MinOverlapPercentPlacement
+
+Style * Colorset 2, HilightColorset 3, \
+        BorderColorset 2, HilightBorderColorset 3, \
+        BorderWidth 3, HandleWidth 3, \
+        FvwmBorder, FirmBorder, \
+        MWMButtons, UseDecor MyDecor
+
+Style "*" NoIcon
+Style * EWMHMiniIconOverride
+Style * EWMHUseStackingOrderHints, EWMHUseWindowGroups
+# == Mouse bindings ==
+# Bind actions to window buttons.
+# Leftmost button (rectangle) opens window ops menu.
+# Double click on this closes window.
+#Mouse 1 1 A WindowList
+# Second rightmost button (small square) iconfies the window.
+Mouse 1 2 A Close
+# Rightmost button (big square) maximises the window vertically.
+Mouse 1 4 A Maximize
+Mouse 1 6 A Iconify 
+ # Mouse 1 W N ThisWindow (RightWeatherUpdate)  RefreshWeather
+# Listeners for root window (the "desktop").
+# Left click = Root Menu (app launcher).
+Mouse 1 R A Menu RootMenu
+# Right click = System Menu (syslog/sleep/quit)
+Mouse 3 R A Menu System-Menu Nop
+# Middle click = Window list.
+Mouse 2 R A WindowList
+
+# Middle click on border = Iconify.
+Mouse 2 FS A Iconify
+
+# Right click in border or on window title = raise or lower window.
+Mouse 3 TSIF A RaiseLower
+
+# Handle clicks in window title bar.
+# Left click = move, double click = maximize.
+Mouse 1 T A Maximize-or-Move
+# Middle click = Iconify.
+Mouse 2 T A Iconify
+
+# Mouse 1 + Win key = Move window (Good for undecorated windows).
+Mouse 1 W 4 Move-or-Raise
+
+#KillModule FvwmButtons RightWeatherUpdate
+
+# == Init (startup) function ==
+AddToFunc "InitFunction" I Module FvwmPager PagerRight 0 0 
+AddToFunc "InitFunction" I Module FvwmIconMan RightTaskBarIcons 
+#AddToFunc "InitFunction" I Exec exec stalonetray --geometry 1x1-0-0 --max-geometry 10x1-0-0 --icon-size 18 --kludges force_icons_size --window-type dock --background "#191919" --no-shrink false
+#AddToFunc "InitFunction" I Module FvwmIconMan TaskBarIcons
+AddToFunc "InitFunction" I Module FvwmButtons LeftClock
+
+#AddToFunc "InitFunction" I Module FvwmButtons QuickAccessMenu
+AddToFunc "InitFunction" I Module FvwmButtons DockApps
+AddToFunc "InitFunction" I Module FvwmPager PagerLeft 0 0
+
+
+# == Restart function ==
+AddToFunc "RestartFunction" I Module FvwmPager PagerRight 0 0  
+AddToFunc "RestartFunction" I Module FvwmIconMan RightTaskBarIcons 
+#AddToFunc "RestartFunction" I Module FvwmIconMan TaskBarIcons
+#AddToFunc "RestartFunction" I Exec exec stalonetray --geometry 1x1-0-0 --max-geometry 10x1-0-0 --icon-size 18 --kludges force_icons_size --window-type dock --background "#191919" --no-shrink false
+#AddToFunc "RestartFunction" I Module FvwmButtons QuickAccessMenu 
+AddToFunc "RestartFunction" I Module FvwmButtons LeftClock
+AddToFunc "RestartFunction" I Module FvwmButtons DockApps
+AddToFunc "RestartFunction" I Module FvwmPager PagerLeft 0 0
+
+# == Window Handling Functions ==
+# Move and raise a window.
+AddToFunc Move-or-Raise
+ + I Raise
+ + M Move
+ + D Maximize
+
+# Resize and raise a window.
+AddToFunc Resize-or-Raise   
+ + I Raise
+ + M Resize
+ + D Lower
+
+# Maximize window on double-click in title bar.
+# On single click, focus and allow moving it.
+AddToFunc Maximize-or-Move
+ + D Maximize
+ + I Raise
+ + C Focus
+ + M Move
+
+# Raise and Focus window.
+AddToFunc Raise-and-Focus
+ + I Iconify Off
+ + I Raise
+ + I Focus
+
+# Sort of almost kind of Windows-ish Alt-Tab.
+AddToFunc TabSwitchNext
++ I WindowListFunc
+AddToFunc TabSwitchPrev
++ I Prev TabSwitchNext
+
+# Move Window + Cursor without entering move mode.
+# Couldn't get function args working here so one for each direction :-(
+# 30px move:
+AddToFunc WinAndCursLeft
+ + I Move w-30p w+0
+ + I CursorMove -30p 0
+AddToFunc WinAndCursRight
+ + I Move w+30p w+0
+ + I CursorMove +30p 0
+AddToFunc WinAndCursUp
+ + I Move w+0 w-30p
+ + I CursorMove 0 -30p
+AddToFunc WinAndCursDown
+ + I Move w+0 w+30p
+ + I CursorMove 0 +30p
+
+# 100px move:
+AddToFunc WinAndCursLeftS
+ + I Move w-100p w+0
+ + I CursorMove -100p 0
+AddToFunc WinAndCursRightS
+ + I Move w+100p w+0
+ + I CursorMove +100p 0
+AddToFunc WinAndCursUpS
+ + I Move w+0 w-100p
+ + I CursorMove 0 -100p
+AddToFunc WinAndCursDownS
+ + I Move w+0 w+100p
+ + I CursorMove 0 +100p
+
+# Resize Window + Move Cursor without entering resize mode.
+AddToFunc IncreaseWidth
+ + I Resize br w+50p w+0
+ + I CursorMove +50p 0
+AddToFunc DecreaseWidth
+ + I Resize br w-50p w+0
+ + I CursorMove -50p 0
+AddToFunc IncreaseHeight
+ + I Resize br w+0 w+50p
+ + I CursorMove 0 +50p
+AddToFunc DecreaseHeight
+ + I Resize br w+0 w-50p
+ + I CursorMove 0 -50p
+
+# == Keyboard bindings ==
+# HInt
+# Key [KeyName] [Context] [Modifiers] [Action]
+# S	Modifier	Shift key.
+# 4	Modifier	Mod4 (Windows/Super key).
+# C	Modifier	Control key.
+# M	Modifier	Meta (usually the Alt key).
+
+# Ignore Num Lock.
+IgnoreModifiers L25
+
+# Paging: Windows key + arrows moves to the
+# next desktop in the desired direction.
+Key Left  A 4 Scroll -100 0
+Key Right A 4 Scroll +100 +0
+Key Up    A 4 Scroll +0 -100
+Key Down  A 4 Scroll +0 +100
+
+# Alt-Tab like in MS Windows (-ish).
+Key Tab A M	WindowList Root c c CurrentAtEnd, IconifiedAtEnd, NoGeometry, NoDeskSort, SelectOnRelease Alt_L TabSwitchPrev
+Key Tab	A CM	WindowList Root c c CurrentAtEnd, IconifiedAtEnd, NoGeometry, OnlyListSkip, SelectOnRelease
+
+# Windows key + W shows "normal" window list which can be navigated
+# with arrow keys, window numbers etc.
+Key W A 4 WindowList Root
+Key r A M Exec dmenu_run -fn 'Cozette-11' -nb '#191919' -nf '#e2e2e2'
+
+# Windows key + Ctrl + Arrows to move mouse (and thus focus) to window,
+# but only within the current page.
+Key Up    A C4 Direction North (CurrentPage) WarpToWindow
+Key Down  A C4 Direction South (CurrentPage) WarpToWindow
+Key Left  A C4 Direction West  (CurrentPage) WarpToWindow
+Key Right A C4 Direction East  (CurrentPage) WarpToWindow
+
+# Windows key + page up/page down for volume.
+Key XF86AudioRaiseVolume A A Exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+Key XF86AudioLowerVolume A A Exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+Key XF86AudioMute        A A Exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
+
+# Win + F1 = Maximize active window horizontally + vertically.
+Key F A S4 Maximize
+
+# Win + F2 = Maximize active window vertically.
+Key F2 A 4 Maximize 0 100
+
+# Win + F3 = Minimize active window
+Key M A S4 Iconify
+
+
+# Alt + F4 = Closes active window
+Key Q A S4 Close
+# Activate move window mode: Win + m.
+Key m A 4 Move
+
+# Activate resize window mode: Win + r.
+Key r A 4 Resize
+
+# Move active window with Windows key + Alt + Arrows (30px).
+Key Left  A 14 WinAndCursLeft
+Key Right A 14 WinAndCursRight
+Key Up    A 14 WinAndCursUp
+Key Down  A 14 WinAndCursDown
+
+# Same as above but shift + win + alt + arrows and bigger distance (100px).
+Key Left  A S14 WinAndCursLeftS
+Key Right A S14 WinAndCursRightS
+Key Up    A S14 WinAndCursUpS
+Key Down  A S14 WinAndCursDownS
+
+# Shift + Win + Arrows: Resize window.
+Key Right A S4 IncreaseWidth
+Key Left A S4 DecreaseWidth
+Key Down A S4 IncreaseHeight
+Key Up A S4 DecreaseHeight
+
+# Start file manager: Windows key + e.
+Key e A 4 Exec pcmanfm 
+
+# Show root menu from anywhere: Windows key + Escape.
+Key Escape A 4 Menu RootMenu
+
+# Show system root menu from anywhere: Shift + Windows key + Escape.
+Key Escape A S4 Menu System-Menu
+
+# New terminal: Win + Enter.
+Key Return A 4 Exec xterm -fn -misc-fixed-medium-r-*-*-18-*-*-*-*-*-iso10646-1 -n "xterm" &
+
+
+# == Define Menus ==
+
+# Menu for top left hand ("close") button on windows.
+AddToMenu Window-Ops2 
++  "Move"     Move
++  "Resize"   Resize
++  ""         Nop
++  "Delete"   Delete
++  "Close"    Close
++  "Destroy"  Destroy
+
+# Root System Menu (Right click on root window, Win+Shift+Esc).
+AddToMenu System-Menu 
++  "System"        Title
++  ""              Nop
++  "Resize"        Resize-or-Raise
++  "Move"          Move-or-Raise
++  ""              Nop
++  "Kill"          Destroy
++  "Delete"        Delete
+   ""              Nop
++  "Restart FVWM"  Restart fvwm2
++  ""              Nop
++  "Sleep Mode"    Popup SuspendMenu #Suspend
++  "Exit X11"      Popup QuitMenu #Quit
+
+# Submenus to System menu.
+  # - Confirm exiting X11.
+  AddToMenu QuitMenu "Exit X11?" Title
+  +  "No Thanks"    Nop
+  +  "Yes, Exit X"  Quit
+
+  # - Confirm suspend.
+  AddToMenu SuspendMenu "Sleep Mode?" Title
+  +  "No Thanks"   Nop
+  +  "Yes, Sleep"  Exec systemctl suspend
+
+# This is the Root Menu (left click on root window, Win+Esc),
+# for launching applications. It will open sub menus defined below.
+AddToMenu RootMenu
++  " Workspace Menu "  Title
++  "XTerm"             Exec xterm -fn -misc-fixed-medium-r-*-*-18-*-*-*-*-*-iso10646-1 &
++  "Small XTerm"       Exec xterm -n "sm xterm" &
++  "X-Large Xterm"     Exec xterm -n "xl xterm" -geometry 80x41 -fn -*-fixed-medium-*-*-*-24-*-*-*-*-*-*-1 &
++  "Launcher"          Exec dmenu_run -fn 'Cozette-11' -nb '#191919' -nf '#e2e2e2'
++  ""                  Nop
++  "Firefox"  	       Exec firefox
++  "gVim"	       Exec gvim
++  "Utilities"         Popup UtilsMenu
+# Submenus to Root Menu.
+  # Various utilities and applications menu.
+  AddToMenu UtilsMenu
+  +  "Utils Menu" Title
+  +  "Obsidian"	       exec obsidian
+  +  "Steam"	       exec steam
+  +  "qBittorrent"     exec qbittorrent
+  +  "Lutris"	       exec Lutris
+  +  "KeePassXC"       exec keepassxc
+  +  "Marker"          exec marker
+  +  "VirtManager"     exec virt-manager
+  +  "Pcmanfm"	       exec pcmanfm
+# == End of config file ==

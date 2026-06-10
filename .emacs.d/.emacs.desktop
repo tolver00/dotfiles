@@ -1,0 +1,79 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Apr  2 10:32:20 2026
+;; Desktop file format version 208
+;; Emacs version 30.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (27086 10644 905144 125000) (desktop . "208") "at@void" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-UKWN-Iosevka-regular-normal-normal-*-13-*-*-*-d-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#e2e2e2") (background-color . "#1c211f") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 0) (right-fringe . 0) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (alpha-background) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (use-frame-synchronization) (skip-taskbar) (z-group) (cursor-color . "#61afef") (display-type . color) (background-mode . dark) (font-parameter) (environment "TERM=linux" "__fish_git_prompt_color_branch=brblue" "theme_color_path=brwhite" "theme_color_batt_charging=brgreen" "__fish_git_prompt_show_informative_status=yes" "XDG_RUNTIME_DIR=/run/user/1000" "theme_prompt_virtualenv_char_begin=(" "theme_prompt_batt_75=\357\211\201" "FVWM_MODULEDIR=/usr/lib/fvwm3/1.1.4" "__fish_git_prompt_char_stateseparator= " "theme_color_batt_icon=white" "theme_prompt_group_separator=:" "theme_color_normal=normal" "__fish_git_prompt_char_branch_begin=" "DXVK_HUD=fps,gpuload" "FVWMMFL_SOCKET_PATH=/tmp/fvwmmfl" "__fish_git_prompt_showcolorhints=yes" "theme_color_status_rw=brwhite" "theme_color_time=666666" "theme_prompt_batt_25=\357\211\203" "theme_color_batt_25=red" "__fish_git_prompt_color_branch_begin=bryellow" "DXVK_LOG_PATH=/home/at/Games/.dxvk_logs" "AMPY_PORT=/dev/ttyUSB1" "SHELL=/usr/bin/fish" "MAIL=/var/spool/mail/at" "LOGNAME=at" "DXVK_LOG_LEVEL=info" "theme_color_separator=brblack" "theme_color_batt_75=bryellow" "theme_prompt_segment_separator_color=normal" "XAUTHORITY=/home/at/.Xauthority" "FVWMMFL_SOCKET=/tmp/fvwmmfl/fvwm_mfl_:0.sock" "QT_QPA_PLATFORMTHEME=qt5ct" "theme_prompt_char=$" "FVWM_DATADIR=/usr/share/fvwm3" "XDG_SESSION_TYPE=tty" "theme_prompt_char_normal=$" "theme_prompt_virtualenv_color_char_begin=normal" "theme_prompt_batt_charging_char=\342\206\221" "FVWM_IS_FVWM3=1" "theme_prompt_segment_separator_char= " "theme_prompt_virtualenv_char_end=)" "SHLVL=3" "theme_prompt_status_rw_char=." "theme_color_batt_discharging=red" "OMF_PATH=/home/at/.local/share/omf" "theme_color_status_prefix=brblue" "WINDOWPATH=1" "MOTD_SHOWN=pam" "theme_prompt_batt_0=\357\211\204" "theme_prompt_batt_50=\357\211\202" "theme_color_bracket=brblue" "theme_color_prompt=white" "theme_color_virtualenv=bryellow" "theme_prompt_virtualenv_color_char_end=normal" "XDG_SESSION_ID=1" "WINEFSYNC_FUTEX2=1" "theme_prompt_status_separator_char=/" "theme_color_batt_50=bryellow" "DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-jikroTlyYQ,guid=53ab615e7f3ee09cd299c3c869b2e42f" "theme_prompt_char_superuser=#" "__fish_git_prompt_color_merging=red" "theme_color_superuser=red" "PATH=/opt/rocm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" "DISPLAY=:0" "theme_color_batt_0=red" "theme_color_status_jobs=brgreen" "theme_display_time_format=+%I:%M" "DXVK_FULLSCREEN=1" "theme_prompt_batt_100=\357\211\200" "HOSTDISPLAY=arch:0" "FVWM_USERDIR=/home/at/.fvwm" "XDG_VTNR=1" "theme_prompt_status_jobs_char=%" "XDG_SESSION_CLASS=user" "OMF_CONFIG=/home/at/.config/omf" "theme_color_host=brgreen" "HOME=/home/at" "AMPY_BAUD=115200" "XDG_SEAT=seat0" "USER=at" "theme_color_user=white" "__fish_git_prompt_char_branch_end=" "theme_prompt_userhost_separator=@" "WINEESYNC=1" "LANG=en_DK.UTF-8" "DXVK_STATE_CACHE=1" "theme_color_batt_100=brgreen" "WINEFSYNC=1" "theme_prompt_superuser_glyph=\342\230\205" "theme_color_group=666666" "ROCM_PATH=/opt/rocm" "theme_color_error=red" "__fish_git_prompt_color_branch_end=bryellow" "theme_prompt_batt_discharging_char=\342\206\223" "PWD=/home/at") (last-focus-update . t) (frameset--id . "0B78-30C4-88B7-C87E") (frameset--mini t . t) (sticky) (shaded) (dnd-root-window-position) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 81) (width . 364) (left . 1920) (top . 25)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 68) (min-pixel-width . 70) (min-pixel-height-ignore . 34) (min-pixel-width-ignore . 14) (min-pixel-height-safe . 17) (min-pixel-width-safe . 14)) leaf (pixel-width . 2548) (pixel-height . 1360) (total-width . 364) (total-height . 80) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 0 0 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 230) (start . 1)) (prev-buffers ("*Buffer List*" 1 235) ("config" 2979 3422) (".fvwm" 1 553) ("init.el" 1 557))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '(#("Left" 0 4 (isearch-case-fold-search nil isearch-regexp-function nil)) #("Cinzel" 0 6 (isearch-case-fold-search nil isearch-regexp-function nil)) #("xclock" 0 6 (isearch-case-fold-search t isearch-regexp-function nil)) #("cinzel" 0 6 (isearch-case-fold-search t isearch-regexp-function nil)) #("Cozette" 0 7 (isearch-case-fold-search nil isearch-regexp-function nil)) #("Menu" 0 4 (isearch-case-fold-search nil isearch-regexp-function nil)) #("flymake" 0 7 (isearch-case-fold-search t isearch-regexp-function nil)) #("font" 0 4 (isearch-case-fold-search t isearch-regexp-function nil)) #("sly" 0 3 (isearch-case-fold-search t isearch-regexp-function nil)) #("which" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("vertico" 0 7 (isearch-case-fold-search t isearch-regexp-function nil)) #("corfu" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("eglot" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("AddToFUnc" 0 9 (isearch-case-fold-search nil isearch-regexp-function nil)) #("AddToFunc" 0 9 (isearch-case-fold-search nil isearch-regexp-function nil)) #("which-" 0 6 (isearch-case-fold-search t isearch-regexp-function nil))))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.fvwm/config" "~/.fvwm/" "~/Documents/programming/dns_c/dns.c" "~/Documents/programming/dns_c" "~/Documents/" "~/Documents/programming/syscalls/main.c" "~/Documents/programming/syscalls/hello_world.c" "~/Documents/programming/syscalls" "~/Documents/" "~/.fvwm/FvwmScript-DateTime" "~/Documents/programming/list/sly_first.lisp" "~/.emacs.d/" "~/.emacs.d/init.el" "~/.fvwm/config" "~/Documents/programming/dnspython/dnspython_testing.py" "~/Documents/programming/dnspython" "~/Documents/programming/" "~/.emacs" "~/.emacs/" "~/Documents/programming/fltk/app_launcher/main.cpp" "~/.emacs" "~/.Xresources" "~/.vim/colors/tri-dark.vim" "~/.emacs" "~/Documents/programming/python/exercies/" "~/Documents/" "~/Desktop/brave-browser.desktop" "~/Desktop/emacs.desktop" "~/Documents/programming/python/exercies/xor_socket.py" "~/Documents/programming/python/exercies/xor_client.py" "~/Documents/programming/python/exercies/xor_socket.py" "~/Documents/programming/python/exercies/" "~/Documents/programming/python/exercies/testfile.txt" "~/Documents/programming/python/exercies/xor_cipher.py" "~/Documents/networking/analysis_method.md" "~/Documents/networking/ARP_scanning.md" "~/.emacs" "~/.config/fastfetch/config.jsonc" "~/Documents/programming/python/exercies/socker_client_03.py" "~/Documents/programming/python/exercies/socket_server_03.py" "~/Documents/programming/python/exercies/socket_client_02.py" "~/Documents/programming/python/exercies/socket_server_02.py" "~/Documents/programming/python/exercies/socket_server.py" "~/Documents/programming/python/exercies/socket_01.py" "~/Documents/programming/python/exercies/socket_client.py" "~/.emacs" "~/Documents/programming/python/exercies/socket_01.py" "~/.emacs" "~/.Xresources" "~/.emacs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/at/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(corfu-mode display-line-numbers-mode font-lock-mode eldoc-mode)
+  230
+  '(1799 nil)
+  nil
+  nil
+  '((buffer-display-time 27086 10640 315948 616000) (buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring (1809 1699 1699 1894 1894 1699 1698 1659 1680 1262 1679 138 1966 2001 2001 1966))))
+
+(desktop-create-buffer 208
+  nil
+  ".saves-*"
+  'dired-mode
+  '(display-line-numbers-mode font-lock-mode)
+  506
+  '(506 nil)
+  t
+  '("/home/at/.emacs.d/auto-save-list/.saves-*")
+  '((buffer-display-time 27086 10375 60484 63000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/at/.fvwm/config"
+  "config"
+  'conf-space-mode
+  '(corfu-mode display-line-numbers-mode font-lock-mode)
+  3422
+  '(748 nil)
+  nil
+  nil
+  '((buffer-display-time 27086 10428 342515 962000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (6173 3950 4633 4081 4049 4160 3531))))
+
+(desktop-create-buffer 208
+  nil
+  ".fvwm"
+  'dired-mode
+  '(display-line-numbers-mode font-lock-mode)
+  553
+  '(nil nil)
+  t
+  '("/home/at/.fvwm/")
+  '((buffer-display-time 27086 9250 540122 838000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/at/.emacs.d/themes/greybird-dark-theme.el"
+  "greybird-dark-theme.el"
+  'emacs-lisp-mode
+  '(corfu-mode display-line-numbers-mode font-lock-mode eldoc-mode)
+  179
+  '(1993 nil)
+  nil
+  nil
+  '((buffer-display-time 27086 10627 444026 968000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (1171 819 820 1470 880 863 865 820 819 846 3937 4045))))
+

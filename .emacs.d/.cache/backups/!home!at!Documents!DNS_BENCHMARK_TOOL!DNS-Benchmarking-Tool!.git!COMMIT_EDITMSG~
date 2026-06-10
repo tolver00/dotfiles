@@ -1,0 +1,25 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   src/dnsbench/__main__.py
+#
+# Untracked files:
+#	src/dnsbench/__pycache__/
+#	src/dnsbench/config/latency_scaling_docker/
+#	src/dnsbench/config/latency_scaling_metal/
+#	src/dnsbench/config/nxdomain_tests/
+#	src/dnsbench/config/protocol_tests/
+#	src/dnsbench/config/rdtype_tests_docker/
+#	src/dnsbench/config/rdtype_tests_metal/
+#	src/dnsbench/errors.txt
+#	src/dnsbench/results.json
+#	src/dnsbench/results/
+#	src/dnsbench/test_bug.json
+#	src/dnsbench/test_results/
+#	src/dnsbench/worker.so
+#

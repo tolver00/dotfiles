@@ -1,0 +1,29 @@
+function update_label () {
+    label=$(date '+%H:%M %d/%m/%y')
+}
+
+if [[ $1 == --update-label ]]; then
+    update_label
+
+    exit 0
+fi
+
+if [[ $1 = --daemon ]]; then
+    function daemon () {
+        # update_label
+
+        sleep $((60 - $(date +%_S) + 3))
+
+        while true; do
+            update_label
+
+            sleep 60
+        done
+
+        return 1
+    }
+    
+    until daemon; do
+        sleep 2
+    done
+fi
